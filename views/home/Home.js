@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Dimensions, FlatList, SafeAreaView, Text, View} from 'react-native';
+import {Dimensions, FlatList, Text, View} from 'react-native';
 import ManageOrderTabs from '../../components/ManageTabs/ManageTabs';
 import {useDispatch, useSelector} from 'react-redux';
 import TileList from '../../components/TileList/TileList';
@@ -27,13 +27,13 @@ const Home = () => {
   }, [data.items, dispatch]);
 
   return (
-    <SafeAreaView>
+    <View style={{height: Dimensions.get('screen').height * 0.81}}>
       <Text
         style={{
           fontFamily: 'Poppins-Medium',
           fontWeight: '500',
-          color: 'black',
-          fontSize: 14,
+          color: '#454868',
+          fontSize: 15,
           marginHorizontal: 15,
           marginTop: 10,
           marginBottom: -10,
@@ -58,6 +58,8 @@ const Home = () => {
       <FlatList
         style={{height: Dimensions.get('screen').height * 0.62}}
         data={menu[0].menu}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
         renderItem={({item, index}) => (
           <TileList key={index} item={item} category={menu[0].category} />
         )}
@@ -117,7 +119,7 @@ const Home = () => {
           </Text>
         </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 };
 

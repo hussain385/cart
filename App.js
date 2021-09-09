@@ -27,7 +27,8 @@ function App() {
                   fontFamily: 'Poppins-Medium',
                   fontWeight: '500',
                   color: 'black',
-                  fontSize: 14,
+                  fontSize: 15,
+                  marginLeft: 4,
                 }}>
                 Stadium
               </Text>
@@ -42,8 +43,9 @@ function App() {
                     fontWeight: '500',
                     color: 'black',
                     fontSize: 15,
-                    marginHorizontal: 10,
-                    marginTop: -2,
+                    marginLeft: 12,
+                    marginRight: 11.39,
+                    marginTop: -3,
                   }}>
                   Oslo
                 </Text>

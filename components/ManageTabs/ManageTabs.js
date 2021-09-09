@@ -16,6 +16,8 @@ const ManageOrderTabs = props => {
       <FlatList
         horizontal={true}
         data={Tabs}
+        showsVerticalScrollIndicator={false}
+        showsHorizontalScrollIndicator={false}
         style={{marginHorizontal: 15}}
         renderItem={({item, index}) => (
           <TouchableOpacity
@@ -100,7 +102,7 @@ const styles = StyleSheet.create({
     shadowRadius: 4.65,
   },
   unactiveText: {
-    color: 'black',
+    color: '#323232',
     fontSize: 12,
   },
   inActiveLine: {

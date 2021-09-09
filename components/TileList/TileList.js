@@ -12,7 +12,7 @@ export default function TileList({item, category}) {
       style={{
         marginLeft: 14,
         marginRight: 16,
-        marginVertical: 10,
+        marginBottom: 10,
         shadowOpacity: 100,
         elevation: 5,
         borderRadius: 7,
