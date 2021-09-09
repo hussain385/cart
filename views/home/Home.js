@@ -34,19 +34,17 @@ const Home = () => {
           fontWeight: '500',
           color: 'black',
           fontSize: 14,
-          marginHorizontal: '6%',
+          marginHorizontal: 15,
           marginTop: 10,
           marginBottom: -10,
         }}>
         Categories
       </Text>
-      <View style={{justifyContent: 'space-evenly', margin: 'auto'}}>
-        <ManageOrderTabs
-          Tabs={Tabs}
-          handleItemActive={handleItemActive}
-          activeItem={activeItem}
-        />
-      </View>
+      <ManageOrderTabs
+        Tabs={Tabs}
+        handleItemActive={handleItemActive}
+        activeItem={activeItem}
+      />
 
       <View
         style={{
@@ -69,12 +67,12 @@ const Home = () => {
       {/*))}*/}
       <View
         style={{
-          borderTopLeftRadius: 10,
-          borderTopRightRadius: 10,
+          borderTopLeftRadius: 5,
+          borderTopRightRadius: 5,
           backgroundColor: '#EF2E78',
           flexDirection: 'row',
           justifyContent: 'space-between',
-          height: '12%',
+          height: 70,
           alignItems: 'center',
           padding: 10,
         }}>
@@ -93,10 +91,11 @@ const Home = () => {
         </View>
         <View
           style={{
-            justifyContent: 'flex-end',
+            alignItems: 'flex-end',
             borderLeftWidth: 1,
             borderLeftColor: 'white',
-            paddingHorizontal: 20,
+            paddingLeft: 19,
+            paddingRight: 30,
           }}>
           <Text
             style={{
@@ -105,13 +104,13 @@ const Home = () => {
               fontSize: 15,
               color: 'white',
             }}>
-            $ {data.totalCost}
+            $ {data.totalCost.toFixed(2)}
           </Text>
           <Text
             style={{
               fontFamily: 'Poppins-Medium',
               fontWeight: '600',
-              fontSize: 15,
+              fontSize: 12,
               color: 'white',
             }}>
             {data.totalQuantity} Items

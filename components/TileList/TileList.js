@@ -1,16 +1,24 @@
 import React from 'react';
-import {View, Text, Button, TouchableOpacity} from 'react-native';
-import {Card, Title, Paragraph} from 'react-native-paper';
+import {View, Text, TouchableOpacity} from 'react-native';
+import {Card, Paragraph} from 'react-native-paper';
 import {useDispatch} from 'react-redux';
+import AntDesign from 'react-native-vector-icons/dist/AntDesign';
 import {addQuantity, removeQuantity} from '../../store/slices';
 
 export default function TileList({item, category}) {
   const dispatch = useDispatch();
   return (
     <Card
-      style={{margin: 5, shadowOpacity: 100, elevation: 5, borderRadius: 7}}>
-      <Card.Title style={{fontFamily: 'Poppins-Medium'}} title={item.title} />
+      style={{
+        marginLeft: 14,
+        marginRight: 16,
+        marginVertical: 10,
+        shadowOpacity: 100,
+        elevation: 5,
+        borderRadius: 7,
+      }}>
       <Card.Content>
+        <Text style={{fontSize: 18, fontWeight: '500'}}>{item.title}</Text>
         <View
           style={{
             padding: 3,
@@ -20,35 +28,27 @@ export default function TileList({item, category}) {
           <View>
             <Paragraph>$ {item.price}</Paragraph>
           </View>
-          <View style={{flexDirection: 'row', height: 29}}>
+          <View style={{flexDirection: 'row'}}>
             <TouchableOpacity
               style={{
-                backgroundColor: '#454868',
-                padding: 11,
                 marginRight: 10,
-                borderRadius: 100,
               }}
               onPress={() => {
                 dispatch(removeQuantity({item, category}));
               }}>
-              <Text style={{fontSize: 20, marginTop: -12, color: 'white'}}>
-                -
-              </Text>
+              <AntDesign name="minuscircle" size={14} color="#454868" />
             </TouchableOpacity>
-            <Paragraph>{item?.quantity}</Paragraph>
+            <Text style={{fontWeight: '700', fontSize: 15, marginTop: -3}}>
+              {('0' + item?.quantity).slice(-2)}
+            </Text>
             <TouchableOpacity
               style={{
-                backgroundColor: '#EF2E78',
-                padding: 10,
-                borderRadius: 100,
                 marginLeft: 10,
               }}
               onPress={() => {
                 dispatch(addQuantity({item, category}));
               }}>
-              <Text style={{fontSize: 15, marginTop: -6, color: 'white'}}>
-                +
-              </Text>
+              <AntDesign name="pluscircle" size={14} color="#EF2E78" />
             </TouchableOpacity>
           </View>
         </View>

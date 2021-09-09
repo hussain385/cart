@@ -16,7 +16,7 @@ const ManageOrderTabs = props => {
       <FlatList
         horizontal={true}
         data={Tabs}
-        style={{marginHorizontal: 23}}
+        style={{marginHorizontal: 15}}
         renderItem={({item, index}) => (
           <TouchableOpacity
             key={item.category}
@@ -49,21 +49,12 @@ const ManageOrderTabs = props => {
 export default ManageOrderTabs;
 
 const styles = StyleSheet.create({
-  wrapper: {
-    width: DEVICE_WIDTH,
-    marginTop: 25,
-    borderBottomWidth: 1,
-    borderBottomColor: '#737373',
-    paddingBottom: 20,
-  },
   flexerRow: {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-evenly',
     flexDirection: 'row',
     marginTop: 20,
-    // borderColor: 'red',
-    // borderWidth: 2
   },
   tab: {
     backgroundColor: '#EF2E78',
@@ -80,8 +71,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
-
-    // elevation: 7
   },
   text: {
     color: '#FFFFFF',
@@ -109,7 +98,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.29,
     shadowRadius: 4.65,
-    // elevation: -7
   },
   unactiveText: {
     color: 'black',
