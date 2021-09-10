@@ -90,30 +90,42 @@ const Home = () => {
         </View>
         <View
           style={{
-            alignItems: 'flex-end',
-            borderLeftWidth: 1,
-            borderLeftColor: 'white',
-            paddingLeft: 19,
-            paddingRight: 30,
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            width: '33%',
           }}>
-          <Text
+          <View
             style={{
-              fontFamily: 'Poppins-Medium',
-              fontWeight: '600',
-              fontSize: 15,
-              color: 'white',
-            }}>
-            $ {data.totalCost.toFixed(2)}
-          </Text>
-          <Text
+              borderLeftWidth: 1,
+              borderLeftColor: 'white',
+              flexDirection: 'column',
+            }}
+          />
+          <View
             style={{
-              fontFamily: 'Poppins-Medium',
-              fontWeight: '600',
-              fontSize: 12,
-              color: 'white',
+              alignItems: 'flex-end',
+              marginRight: 30,
+              flexDirection: 'column',
             }}>
-            {data.totalQuantity} Items
-          </Text>
+            <Text
+              style={{
+                fontFamily: 'Poppins-Medium',
+                fontWeight: '600',
+                fontSize: 15,
+                color: 'white',
+              }}>
+              $ {data.totalCost.toFixed(2)}
+            </Text>
+            <Text
+              style={{
+                fontFamily: 'Poppins-Medium',
+                fontWeight: '600',
+                fontSize: 12,
+                color: 'white',
+              }}>
+              {data.totalQuantity} Items
+            </Text>
+          </View>
         </View>
       </View>
     </View>
