@@ -64,9 +64,6 @@ const Home = () => {
           <TileList key={index} item={item} category={menu[0].category} />
         )}
       />
-      {/*{menu[0].menu.map(item => (*/}
-      {/*  <TileList key={item.title} item={item} category={menu[0].category} />*/}
-      {/*))}*/}
       <View
         style={{
           borderTopLeftRadius: 5,

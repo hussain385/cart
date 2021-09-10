@@ -39,7 +39,9 @@ export default function TileList({item, category}) {
               <AntDesign name="minuscircle" size={14} color="#454868" />
             </TouchableOpacity>
             <Text style={{fontWeight: '700', fontSize: 15, marginTop: -3}}>
-              {('0' + item?.quantity).slice(-2)}
+              {item?.quantity < 10
+                ? ('0' + item?.quantity).slice(-2)
+                : item?.quantity}
             </Text>
             <TouchableOpacity
               style={{
